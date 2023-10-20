@@ -1,0 +1,203 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{3C25A2CB-0D80-460C-8957-53CEB19FA322}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>TunicLanguageMod</RootNamespace>
+    <AssemblyName>TunicLanguageMod</AssemblyName>
+    <TargetFrameworkVersion>v4.7.2</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <Deterministic>true</Deterministic>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="0Harmony">
+      <HintPath>Libraries\0Harmony.dll</HintPath>
+    </Reference>
+    <Reference Include="Assembly-CSharp">
+      <HintPath>Libraries\Assembly-CSharp.dll</HintPath>
+    </Reference>
+    <Reference Include="BepInEx.Core">
+      <HintPath>Libraries\BepInEx.Core.dll</HintPath>
+    </Reference>
+    <Reference Include="BepInEx.IL2CPP">
+      <HintPath>Libraries\BepInEx.IL2CPP.dll</HintPath>
+    </Reference>
+    <Reference Include="Il2Cppmscorlib">
+      <HintPath>Libraries\Il2Cppmscorlib.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Xml" />
+    <Reference Include="UnhollowerBaseLib">
+      <HintPath>Libraries\UnhollowerBaseLib.dll</HintPath>
+    </Reference>
+    <Reference Include="UnityEngine">
+      <HintPath>Libraries\UnityEngine.dll</HintPath>
+    </Reference>
+    <Reference Include="UnityEngine.CoreModule">
+      <HintPath>Libraries\UnityEngine.CoreModule.dll</HintPath>
+    </Reference>
+    <Reference Include="UnityEngine.ImageConversionModule, Version=0.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>Libraries\UnityEngine.ImageConversionModule.dll</HintPath>
+    </Reference>
+    <Reference Include="UnityEngine.IMGUIModule">
+      <HintPath>Libraries\UnityEngine.IMGUIModule.dll</HintPath>
+    </Reference>
+    <Reference Include="UnityEngine.UI">
+      <HintPath>Libraries\UnityEngine.UI.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="PageDictionary.cs" />
+    <Compile Include="InitializationPatches.cs" />
+    <Compile Include="PageDisplayPatches.cs" />
+    <Compile Include="TunicLanguagePlugin.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="leaves\leaf_0r.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="grungifiers\page grungifier %280r%29.png" />
+    <EmbeddedResource Include="grungifiers\page grungifier %280v%29.png" />
+    <EmbeddedResource Include="grungifiers\page grungifier %2810r%29.png" />
+    <EmbeddedResource Include="grungifiers\page grungifier %2810v%29.png" />
+    <EmbeddedResource Include="grungifiers\page grungifier %2811r%29.png" />
+    <EmbeddedResource Include="grungifiers\page grungifier %2811v%29.png" />
+    <EmbeddedResource Include="grungifiers\page grungifier %2812r%29.png" />
+    <EmbeddedResource Include="grungifiers\page grungifier %2812v%29.png" />
+    <EmbeddedResource Include="grungifiers\page grungifier %2813r%29.png" />
+    <EmbeddedResource Include="grungifiers\page grungifier %2813v%29.png" />
+    <EmbeddedResource Include="grungifiers\page grungifier %2814r%29.png" />
+    <EmbeddedResource Include="grungifiers\page grungifier %2814v%29.png" />
+    <EmbeddedResource Include="grungifiers\page grungifier %2815r%29.png" />
+    <EmbeddedResource Include="grungifiers\page grungifier %2815v%29.png" />
+    <EmbeddedResource Include="grungifiers\page grungifier %2816r%29.png" />
+    <EmbeddedResource Include="grungifiers\page grungifier %2816v%29.png" />
+    <EmbeddedResource Include="grungifiers\page grungifier %2817r%29.png" />
+    <EmbeddedResource Include="grungifiers\page grungifier %2817v%29.png" />
+    <EmbeddedResource Include="grungifiers\page grungifier %2818r%29.png" />
+    <EmbeddedResource Include="grungifiers\page grungifier %2818v%29.png" />
+    <EmbeddedResource Include="grungifiers\page grungifier %2819r%29.png" />
+    <EmbeddedResource Include="grungifiers\page grungifier %2819v%29.png" />
+    <EmbeddedResource Include="grungifiers\page grungifier %281r%29.png" />
+    <EmbeddedResource Include="grungifiers\page grungifier %281v%29.png" />
+    <EmbeddedResource Include="grungifiers\page grungifier %2820r%29.png" />
+    <EmbeddedResource Include="grungifiers\page grungifier %2820v%29.png" />
+    <EmbeddedResource Include="grungifiers\page grungifier %2821r%29.png" />
+    <EmbeddedResource Include="grungifiers\page grungifier %2821v%29.png" />
+    <EmbeddedResource Include="grungifiers\page grungifier %2822r%29.png" />
+    <EmbeddedResource Include="grungifiers\page grungifier %2822v%29.png" />
+    <EmbeddedResource Include="grungifiers\page grungifier %2823r%29.png" />
+    <EmbeddedResource Include="grungifiers\page grungifier %2823v%29.png" />
+    <EmbeddedResource Include="grungifiers\page grungifier %2824r%29.png" />
+    <EmbeddedResource Include="grungifiers\page grungifier %2824v%29.png" />
+    <EmbeddedResource Include="grungifiers\page grungifier %2825r%29.png" />
+    <EmbeddedResource Include="grungifiers\page grungifier %2825v%29.png" />
+    <EmbeddedResource Include="grungifiers\page grungifier %2826r%29.png" />
+    <EmbeddedResource Include="grungifiers\page grungifier %2826v%29.png" />
+    <EmbeddedResource Include="grungifiers\page grungifier %2827r%29.png" />
+    <EmbeddedResource Include="grungifiers\page grungifier %2827v%29.png" />
+    <EmbeddedResource Include="grungifiers\page grungifier %282r%29.png" />
+    <EmbeddedResource Include="grungifiers\page grungifier %282v%29.png" />
+    <EmbeddedResource Include="grungifiers\page grungifier %283r%29.png" />
+    <EmbeddedResource Include="grungifiers\page grungifier %283v%29.png" />
+    <EmbeddedResource Include="grungifiers\page grungifier %284r%29.png" />
+    <EmbeddedResource Include="grungifiers\page grungifier %284v%29.png" />
+    <EmbeddedResource Include="grungifiers\page grungifier %285r%29.png" />
+    <EmbeddedResource Include="grungifiers\page grungifier %285v%29.png" />
+    <EmbeddedResource Include="grungifiers\page grungifier %286r%29.png" />
+    <EmbeddedResource Include="grungifiers\page grungifier %286v%29.png" />
+    <EmbeddedResource Include="grungifiers\page grungifier %287r%29.png" />
+    <EmbeddedResource Include="grungifiers\page grungifier %287v%29.png" />
+    <EmbeddedResource Include="grungifiers\page grungifier %288r%29.png" />
+    <EmbeddedResource Include="grungifiers\page grungifier %288v%29.png" />
+    <EmbeddedResource Include="grungifiers\page grungifier %289r%29.png" />
+    <EmbeddedResource Include="grungifiers\page grungifier %289v%29.png" />
+    <EmbeddedResource Include="leaves\leaf_0v.png" />
+    <EmbeddedResource Include="leaves\leaf_0v_extra.png" />
+    <EmbeddedResource Include="leaves\leaf_10r.png" />
+    <EmbeddedResource Include="leaves\leaf_10v.png" />
+    <EmbeddedResource Include="leaves\leaf_11r.png" />
+    <EmbeddedResource Include="leaves\leaf_11v.png" />
+    <EmbeddedResource Include="leaves\leaf_12r.png" />
+    <EmbeddedResource Include="leaves\leaf_12v.png" />
+    <EmbeddedResource Include="leaves\leaf_13r.png" />
+    <EmbeddedResource Include="leaves\leaf_13v.png" />
+    <EmbeddedResource Include="leaves\leaf_14r.png" />
+    <EmbeddedResource Include="leaves\leaf_14v.png" />
+    <EmbeddedResource Include="leaves\leaf_15r.png" />
+    <EmbeddedResource Include="leaves\leaf_15v.png" />
+    <EmbeddedResource Include="leaves\leaf_16r.png" />
+    <EmbeddedResource Include="leaves\leaf_16v.png" />
+    <EmbeddedResource Include="leaves\leaf_17r.png" />
+    <EmbeddedResource Include="leaves\leaf_17v.png" />
+    <EmbeddedResource Include="leaves\leaf_18r.png" />
+    <EmbeddedResource Include="leaves\leaf_18v.png" />
+    <EmbeddedResource Include="leaves\leaf_19r.png" />
+    <EmbeddedResource Include="leaves\leaf_19v.png" />
+    <EmbeddedResource Include="leaves\leaf_1r.png" />
+    <EmbeddedResource Include="leaves\leaf_1v.png" />
+    <EmbeddedResource Include="leaves\leaf_20r.png" />
+    <EmbeddedResource Include="leaves\leaf_20v.png" />
+    <EmbeddedResource Include="leaves\leaf_21r.png" />
+    <EmbeddedResource Include="leaves\leaf_21v.png" />
+    <EmbeddedResource Include="leaves\leaf_22r.png" />
+    <EmbeddedResource Include="leaves\leaf_22v.png" />
+    <EmbeddedResource Include="leaves\leaf_23r.png" />
+    <EmbeddedResource Include="leaves\leaf_23v.png" />
+    <EmbeddedResource Include="leaves\leaf_24r.png" />
+    <EmbeddedResource Include="leaves\leaf_24v.png" />
+    <EmbeddedResource Include="leaves\leaf_25r.png" />
+    <EmbeddedResource Include="leaves\leaf_25v.png" />
+    <EmbeddedResource Include="leaves\leaf_26r.png" />
+    <EmbeddedResource Include="leaves\leaf_26v.png" />
+    <EmbeddedResource Include="leaves\leaf_27r.png" />
+    <EmbeddedResource Include="leaves\leaf_27v.png" />
+    <EmbeddedResource Include="leaves\leaf_2r.png" />
+    <EmbeddedResource Include="leaves\leaf_2v.png" />
+    <EmbeddedResource Include="leaves\leaf_3r.png" />
+    <EmbeddedResource Include="leaves\leaf_3v.png" />
+    <EmbeddedResource Include="leaves\leaf_4r.png" />
+    <EmbeddedResource Include="leaves\leaf_4v.png" />
+    <EmbeddedResource Include="leaves\leaf_5r.png" />
+    <EmbeddedResource Include="leaves\leaf_5v.png" />
+    <EmbeddedResource Include="leaves\leaf_6r.png" />
+    <EmbeddedResource Include="leaves\leaf_6v.png" />
+    <EmbeddedResource Include="leaves\leaf_7r.png" />
+    <EmbeddedResource Include="leaves\leaf_7v.png" />
+    <EmbeddedResource Include="leaves\leaf_8r.png" />
+    <EmbeddedResource Include="leaves\leaf_8v.png" />
+    <EmbeddedResource Include="leaves\leaf_9r.png" />
+    <EmbeddedResource Include="leaves\leaf_9v.png" />
+  </ItemGroup>
+  <ItemGroup />
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+</Project>
