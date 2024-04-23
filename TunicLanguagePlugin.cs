@@ -27,35 +27,18 @@ namespace TunicLanguageMod
 
         public override void Load()
         {
+            // You can use Logger for console output
+            // It's a static property so you can use it anywhere with TunicLanguagePlugin.Logger
             Logger = Log;
-            Log.LogInfo("Hello World!!!");
-
-            //PageDictionary.Initialize();
-
             Harmony harmony = new Harmony(pluginGuid);
 
-            //MethodInfo original_pc_start = AccessTools.Method(typeof(PlayerCharacter), "Start");
-            //MethodInfo patched_pc_start = AccessTools.Method(typeof(InitializationPatches), "PC_Start_PostPatch");
-            //harmony.Patch(original_pc_start, null, new HarmonyMethod(patched_pc_start));
-
-            
             MethodInfo original_pc_start = AccessTools.Method(typeof(PlayerCharacter), "Start");
             MethodInfo patched_pc_start = AccessTools.Method(typeof(PageDisplayPatches), "InitializeTextureDictionary");
             harmony.Patch(original_pc_start, null, new HarmonyMethod(patched_pc_start));
-            
-
 
             MethodInfo original_pd_update = AccessTools.Method(typeof(PageDisplay), "updatePageturnData");
-            //MethodInfo original_pd_update = AccessTools.Method(
-            //    typeof(PageDisplay),
-            //    "CheckForCachedPage", 
-            //    new Type[] { typeof(PageDisplay.PageSide), typeof(int) }
-            //);
             MethodInfo patched_pd_update = AccessTools.Method(typeof(PageDisplayPatches), "MyUpdatePatchV3");
             harmony.Patch(original_pd_update, new HarmonyMethod(patched_pd_update));
-            //new HarmonyMethod(patched_pd_update), new HarmonyMethod(patched_pd_update));
-
-
         }
     }
 }

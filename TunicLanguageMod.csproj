@@ -75,8 +75,6 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="PageDictionary.cs" />
-    <Compile Include="InitializationPatches.cs" />
     <Compile Include="PageDisplayPatches.cs" />
     <Compile Include="TunicLanguagePlugin.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
