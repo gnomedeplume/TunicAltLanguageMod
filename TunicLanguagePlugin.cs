@@ -34,11 +34,19 @@ namespace TunicLanguageMod
 
             MethodInfo original_pc_start = AccessTools.Method(typeof(PlayerCharacter), "Start");
             MethodInfo patched_pc_start = AccessTools.Method(typeof(PageDisplayPatches), "InitializeTextureDictionary");
-            harmony.Patch(original_pc_start, null, new HarmonyMethod(patched_pc_start));
+            //harmony.Patch(original_pc_start, null, new HarmonyMethod(patched_pc_start));
 
             MethodInfo original_pd_update = AccessTools.Method(typeof(PageDisplay), "updatePageturnData");
             MethodInfo patched_pd_update = AccessTools.Method(typeof(PageDisplayPatches), "MyUpdatePatchV3");
-            harmony.Patch(original_pd_update, new HarmonyMethod(patched_pd_update));
+            //harmony.Patch(original_pd_update, new HarmonyMethod(patched_pd_update));
+
+            MethodInfo original_pd2_start = AccessTools.Method(typeof(PageDisplay), "updatePageturnData");
+            MethodInfo patched_pd2_start = AccessTools.Method(typeof(TextPatches), "OutputTextIds");
+            harmony.Patch(original_pd2_start, null, new HarmonyMethod(patched_pd2_start));
+
+            MethodInfo original_al_start = AccessTools.Method(typeof(AreaLabel), "ShowLabel");
+            MethodInfo patched_al_start = AccessTools.Method(typeof(AreaDataPatches), "UseNewMessage");
+            harmony.Patch(original_al_start, new HarmonyMethod(patched_al_start));
         }
     }
 }

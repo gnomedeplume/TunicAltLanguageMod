@@ -75,7 +75,9 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="AreaDataPatches.cs" />
     <Compile Include="PageDisplayPatches.cs" />
+    <Compile Include="TextPatches.cs" />
     <Compile Include="TunicLanguagePlugin.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
