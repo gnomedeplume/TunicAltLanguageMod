@@ -39,6 +39,10 @@ namespace TunicLanguageMod
             MethodInfo original_pd_update = AccessTools.Method(typeof(PageDisplay), "updatePageturnData");
             MethodInfo patched_pd_update = AccessTools.Method(typeof(PageDisplayPatches), "MyUpdatePatchV3");
             harmony.Patch(original_pd_update, new HarmonyMethod(patched_pd_update));
+
+            MethodInfo original_text_builder = AccessTools.Method(typeof(MixedTextBuilder), "buildFromString");
+            MethodInfo patched_text_builder = AccessTools.Method(typeof(TextBuilderPatches), "BuildTokiPonaGlyphs");
+            harmony.Patch(original_text_builder, null, new HarmonyMethod(patched_text_builder));
         }
     }
 }
