@@ -23,8 +23,13 @@ namespace TunicLanguageMod
                 foreach (var gameObject in builder.gameObjects)
                 {
                     TunicLanguagePlugin.Logger.LogWarning("Name of sub object: " + gameObject.name);
-                    var spriteRenderer = gameObject.GetComponent<SpriteRenderer>();
-                    TunicLanguagePlugin.Logger.LogWarning("Name of the sprite: " + spriteRenderer.sprite.name);
+                    var components = gameObject.GetComponents<Component>();
+                    foreach (var comp in components)
+                    {
+                        TunicLanguagePlugin.Logger.LogWarning(comp.name);
+                        TunicLanguagePlugin.Logger.LogWarning(comp.GetType());
+                        TunicLanguagePlugin.Logger.LogWarning(comp.ToString());
+                    }
                 }
 
                 //TunicLanguagePlugin.Logger.LogWarning(SpriteBuilder.spriteResources.Count);
