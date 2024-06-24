@@ -42,7 +42,7 @@ namespace TunicLanguageMod
 
             MethodInfo original_text_builder = AccessTools.Method(typeof(MixedTextBuilder), "buildFromString");
             MethodInfo patched_text_builder = AccessTools.Method(typeof(TextBuilderPatches), "BuildTokiPonaGlyphs");
-            harmony.Patch(original_text_builder, null, new HarmonyMethod(patched_text_builder));
+            harmony.Patch(original_text_builder, null, new HarmonyMethod(patched_text_builder), null);
         }
     }
 }

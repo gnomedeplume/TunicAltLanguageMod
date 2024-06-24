@@ -57,6 +57,9 @@
     <Reference Include="UnhollowerBaseLib">
       <HintPath>Libraries\UnhollowerBaseLib.dll</HintPath>
     </Reference>
+    <Reference Include="Unity.TextMeshPro">
+      <HintPath>Libraries\Unity.TextMeshPro.dll</HintPath>
+    </Reference>
     <Reference Include="UnityEngine">
       <HintPath>Libraries\UnityEngine.dll</HintPath>
     </Reference>

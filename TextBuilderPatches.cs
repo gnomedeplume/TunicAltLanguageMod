@@ -15,22 +15,25 @@ namespace TunicLanguageMod
             TunicLanguagePlugin.Logger.LogWarning("Finished building sprites for: " + inputString);
             TunicLanguagePlugin.Logger.LogWarning("Number of sprite builders: " + __instance.spriteBuilders.Count);
 
-
+            //__instance.spriteBuilders[0].localizedTextObject.text = "OH HAI THERE SIR, CAN I SPEAK TO YOU?";
 
             foreach (var builder in __instance.spriteBuilders)
             {
-                TunicLanguagePlugin.Logger.LogWarning("Number of sub-objects: " + builder.gameObjects.Count);
-                foreach (var gameObject in builder.gameObjects)
-                {
-                    TunicLanguagePlugin.Logger.LogWarning("Name of sub object: " + gameObject.name);
-                    var components = gameObject.GetComponents<Component>();
-                    foreach (var comp in components)
-                    {
-                        TunicLanguagePlugin.Logger.LogWarning(comp.name);
-                        TunicLanguagePlugin.Logger.LogWarning(comp.GetType());
-                        TunicLanguagePlugin.Logger.LogWarning(comp.ToString());
-                    }
-                }
+                TunicLanguagePlugin.Logger.LogWarning("builder text: " + builder.localizedTextObject.text);
+                TunicLanguagePlugin.Logger.LogWarning("builder text: " + builder.localizedTextObject.font);
+
+                //TunicLanguagePlugin.Logger.LogWarning("Number of sub-objects: " + builder.gameObjects.Count);
+                //foreach (var gameObject in builder.gameObjects)
+                //{
+                //    TunicLanguagePlugin.Logger.LogWarning("Name of sub object: " + gameObject.name);
+                //    var components = gameObject.GetComponents<Component>();
+                //    foreach (var comp in components)
+                //    {
+                //        TunicLanguagePlugin.Logger.LogWarning(comp.name);
+                //        TunicLanguagePlugin.Logger.LogWarning(comp.GetType());
+                //        TunicLanguagePlugin.Logger.LogWarning(comp.ToString());
+                //    }
+                //}
 
                 //TunicLanguagePlugin.Logger.LogWarning(SpriteBuilder.spriteResources.Count);
                 //foreach (var sprite in SpriteBuilder.spriteResources)
